@@ -11,6 +11,8 @@ import AddCoffee from './components/AddCoffee.jsx';
 import UpdateCoffee from './components/UpdateCoffee.jsx';
 import SingleCoffee from './components/SingleCoffee.jsx';
 import Footer from './components/Footer.jsx';
+import SignUp from './components/SignUp.jsx';
+import SignIn from './components/SignIn.jsx';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +45,14 @@ const router = createBrowserRouter([
     path: '/coffee/:id',
     element: <SingleCoffee></SingleCoffee>,
     loader: (params) => fetch(`http://localhost:5000/coffee/${params.params.id}`)
+  },
+  {
+    path: '/signup',
+    element: <SignUp></SignUp>,
+  },
+  {
+    path: '/signin',
+    element: <SignIn></SignIn>
   }
 ])
 
